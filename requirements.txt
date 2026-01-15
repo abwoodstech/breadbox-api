@@ -3,3 +3,4 @@ mysql-connector-python==8.0.33
 requests==2.31.0
 waitress==3.0.2
 gunicorn==23.0.0
+pyinstaller==6.18.0
