@@ -21,14 +21,14 @@ con=mysql.connector.connect(
 
 
 # Create Routes
-@app.route('/v1/breadbox' ,methods=['GET'])
+@app.route('/breadbox' ,methods=['GET'])
 def random_bread():
-    table_choice = random.choice(["Facts", "Jokes"])
+    table_choice = random.choice(["facts", "jokes"])
     cursor = con.cursor(dictionary=True)
     cursor.execute(f"SELECT * FROM {table_choice} ORDER BY RAND() LIMIT 1")
     result = cursor.fetchone()
     cursor.close()
-    return jsonify({"type": table_choice.rstrip('s'), "data": result})
+    return jsonify({"type": table_choice.rstrip('s'), "data": result['bread'})
 
 
 
