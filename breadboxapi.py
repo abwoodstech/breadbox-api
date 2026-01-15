@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 # Import Database
 con=mysql.connector.connect(
-    host='localhost',
+    host='mysqlbreadbox-breadboxapi.c.aivencloud.com',
     user=BREADID,
     password=BREADPW,
     database='breadbox'
