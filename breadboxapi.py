@@ -3,15 +3,17 @@ import mysql.connector
 import random
 import requests
 import json
-from apikeys import *
+import os
 
 app = Flask(__name__)
+
+BREAD_PASSWORD = os.getenv('BREADPW')
 
 # Import Database
 con=mysql.connector.connect(
     host='mysqlbreadbox-breadboxapi.c.aivencloud.com',
-    user=BREADID,
-    password=BREADPW,
+    user='avnadmin',
+    password=BREAD_PASSWORD,
     database='breadbox'
 )
 
