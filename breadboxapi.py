@@ -28,7 +28,7 @@ def random_bread():
     cursor.execute(f"SELECT * FROM {table_choice} ORDER BY RAND() LIMIT 1")
     result = cursor.fetchone()
     cursor.close()
-    return jsonify({"type": table_choice.rstrip('s'), "data": result['bread'])
+    return jsonify({"type": table_choice.rstrip('s'), "data": result['bread']})
 
 
 
