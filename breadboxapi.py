@@ -12,6 +12,7 @@ BREAD_PASSWORD = os.getenv('BREADPW')
 # Import Database
 con=mysql.connector.connect(
     host='mysqlbreadbox-breadboxapi.c.aivencloud.com',
+    port=24766,
     user='avnadmin',
     password=BREAD_PASSWORD,
     database='breadbox'
